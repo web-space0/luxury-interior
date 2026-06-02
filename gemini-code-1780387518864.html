@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code-Champs Design | Ultra-Luxury Interiors</title>
+    
+    <!-- SEO & Meta -->
+    <meta name="description" content="World-class luxury interior design and architecture studio serving high-net-worth clients globally.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        charcoal: '#0F0F0F',
+                        onyx: '#1A1A1A',
+                        gold: '#D4AF37',
+                        ivory: '#F8F6F1',
+                        beige: '#DCCDB8',
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'gradient-luxury': 'linear-gradient(135deg, #0F0F0F 0%, #1A1A1A 100%)',
+                        'gradient-gold': 'linear-gradient(to right, #D4AF37, #F8F6F1, #D4AF37)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-sans antialiased selection:bg-gold selection:text-charcoal cursor-none">
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor hidden md:block"></div>
+    <div class="custom-cursor-dot hidden md:block"></div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress z-50"></div>
+
+    <!-- Loading Screen -->
+    <div id="loader" class="fixed inset-0 z-[60] bg-charcoal flex flex-col items-center justify-center transition-all duration-1000 origin-top">
+        <h2 class="font-serif text-5xl text-gold tracking-widest mb-6 split-text">C - C</h2>
+        <div class="w-48 h-[1px] bg-gold/20 relative overflow-hidden">
+            <div id="loader-bar" class="absolute top-0 left-0 h-full bg-gold w-0 transition-all duration-75"></div>
+        </div>
+        <div id="loader-counter" class="mt-4 text-xs font-light tracking-[0.3em] text-beige">0%</div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-40 glass-nav transition-all duration-300">
+        <div class="max-w-screen-2xl mx-auto px-6 py-5 flex justify-between items-center">
+            <a href="#" class="font-serif text-2xl tracking-[0.2em] text-ivory uppercase cursor-hover">
+                Code<span class="text-gold">-</span>Champs
+            </a>
+            <div class="hidden md:flex space-x-10 text-xs uppercase tracking-widest text-beige font-light">
+                <a href="#about" class="hover:text-gold transition duration-300 cursor-hover link-underline">Studio</a>
+                <a href="#services" class="hover:text-gold transition duration-300 cursor-hover link-underline">Services</a>
+                <a href="#portfolio" class="hover:text-gold transition duration-300 cursor-hover link-underline">Portfolio</a>
+                <a href="#journal" class="hover:text-gold transition duration-300 cursor-hover link-underline">Journal</a>
+            </div>
+            <a href="#contact" class="magnetic-btn hidden md:inline-block border border-gold text-gold px-6 py-2 text-xs uppercase tracking-widest hover:bg-gold hover:text-charcoal transition-colors duration-500 cursor-hover">
+                Inquire
+            </a>
+            <!-- Mobile Menu Icon -->
+            <button class="md:hidden text-gold"><i data-lucide="menu" class="w-6 h-6"></i></button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <!-- Parallax Image -->
+            <img id="hero-img" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80" alt="Luxury Penthouse" class="w-full h-[120%] object-cover opacity-50 origin-top">
+            <div class="absolute inset-0 bg-gradient-to-t from-charcoal via-transparent to-charcoal opacity-90"></div>
+        </div>
+        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto mt-16" data-aos="fade-up" data-aos-duration="1500">
+            <h4 class="text-gold uppercase tracking-[0.4em] text-xs md:text-sm mb-6 animate-fade-in-up font-medium">Masterpieces in Architecture</h4>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif text-ivory mb-6 leading-[1.1] animate-title font-semibold">
+                Designing Extraordinary Spaces <br>
+                <span class="italic text-gradient-gold">for Extraordinary Lives</span>
+            </h1>
+            <p class="text-base md:text-lg font-normal text-beige mb-12 tracking-wide max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="300">
+                Curating timeless, ultra-premium interiors for the world's most exclusive residences, boutique hotels, and visionary developers.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center" data-aos="fade-up" data-aos-delay="500">
+                <a href="#contact" class="magnetic-btn bg-gold text-charcoal px-10 py-4 uppercase tracking-[0.2em] text-xs font-bold hover:bg-ivory transition-colors duration-500 w-full sm:w-auto cursor-hover">Schedule Consultation</a>
+                <a href="#portfolio" class="magnetic-btn border border-gold text-gold px-10 py-4 uppercase tracking-[0.2em] text-xs font-bold hover:bg-gold hover:text-charcoal transition-colors duration-500 w-full sm:w-auto cursor-hover">Explore Portfolio</a>
+            </div>
+        </div>
+        
+        <!-- Elegant Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
+            <i data-lucide="chevron-down" class="text-gold w-8 h-8 opacity-70"></i>
+        </div>
+    </section>
+
+    <!-- Brand Trust Section -->
+    <section class="border-y border-gold/10 bg-onyx py-14 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <!-- Continuous Marquee Effect -->
+            <div class="marquee-container flex whitespace-nowrap opacity-50 hover:opacity-100 transition-opacity duration-700">
+                <div class="marquee-track flex gap-20 items-center">
+                    <span class="font-serif text-xl md:text-2xl tracking-[0.2em]">ARCHITECTURAL DIGEST</span>
+                    <span class="font-serif text-xl md:text-2xl tracking-[0.2em]">VOGUE LIVING</span>
+                    <span class="font-serif text-xl md:text-2xl tracking-[0.2em]">ELLE DECOR</span>
+                    <span class="font-serif text-xl md:text-2xl tracking-[0.2em]">LUXE INTERIORS</span>
+                    <!-- Duplicated for seamless scrolling -->
+                    <span class="font-serif text-xl md:text-2xl tracking-[0.2em]">ARCHITECTURAL DIGEST</span>
+                    <span class="font-serif text-xl md:text-2xl tracking-[0.2em]">VOGUE LIVING</span>
+                    <span class="font-serif text-xl md:text-2xl tracking-[0.2em]">ELLE DECOR</span>
+                    <span class="font-serif text-xl md:text-2xl tracking-[0.2em]">LUXE INTERIORS</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Studio Section -->
+    <section id="about" class="py-32 bg-charcoal relative">
+        <div class="max-w-screen-2xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
+            <div class="img-reveal-container relative cursor-hover" data-aos="fade-right" data-aos-duration="1200">
+                <div class="reveal-overlay bg-charcoal absolute inset-0 z-10 w-full h-full"></div>
+                <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80" alt="Design Studio" class="w-full h-[700px] object-cover hover-scale-img">
+                <div class="absolute bottom-0 left-0 bg-onyx/90 backdrop-blur-md p-8 border-t border-r border-gold/20 z-20" data-tilt data-tilt-max="10">
+                    <p class="font-serif text-4xl text-gold mb-1">15+</p>
+                    <p class="text-xs uppercase tracking-widest text-beige">Years of Excellence</p>
+                </div>
+            </div>
+            <div data-aos="fade-left" data-aos-duration="1200">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-[1px] bg-gold slide-line"></div>
+                    <h4 class="text-gold uppercase tracking-[0.3em] text-xs">Our Philosophy</h4>
+                </div>
+                <h2 class="text-4xl md:text-6xl font-serif mb-8 leading-tight">Uncompromising Craftsmanship <br><span class="italic text-beige">&amp;</span> Timeless Elegance</h2>
+                <p class="text-beige font-light leading-loose mb-6 text-sm md:text-base">
+                    Led by visionary Principal Designer <span class="text-ivory font-medium">Shaurya Kushwaha</span>, our studio is dedicated to curating environments that transcend the ordinary. We believe that true luxury lies in the nuanced details, the exquisite materials, and the seamless integration of form and function.
+                </p>
+                <p class="text-beige font-light leading-loose mb-12 text-sm md:text-base">
+                    From expansive estate planning to bespoke furniture curation, every space we design is a unique narrative, tailored exclusively to the distinct lifestyles of our high-net-worth clientele.
+                </p>
+                <div>
+                    <p class="font-serif italic text-3xl text-ivory tracking-wide mb-1 signature-hover">Shaurya Kushwaha</p>
+                    <p class="text-xs uppercase tracking-[0.2em] text-gold">Founder &amp; Principal Architect</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Signature Services Section -->
+    <section id="services" class="py-32 bg-onyx relative z-10">
+        <div class="max-w-screen-2xl mx-auto px-6">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <h4 class="text-gold uppercase tracking-[0.3em] text-xs mb-4">Signature Expertise</h4>
+                <h2 class="text-4xl md:text-5xl font-serif">Bespoke Design Solutions</h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Service 1 -->
+                <div class="glass-card p-10 group cursor-hover" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon-wrapper w-16 h-16 rounded-full border border-gold/30 flex items-center justify-center mb-8 group-hover:bg-gold transition-colors duration-500">
+                        <i data-lucide="home" class="text-gold group-hover:text-charcoal transition-colors duration-500 w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl mb-4 group-hover:text-gold transition-colors">Luxury Residential</h3>
+                    <p class="text-sm text-beige font-light leading-relaxed">Comprehensive interior architecture and styling for estates, mansions, and private villas.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="glass-card p-10 group cursor-hover" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" data-aos="fade-up" data-aos-delay="200">
+                    <div class="icon-wrapper w-16 h-16 rounded-full border border-gold/30 flex items-center justify-center mb-8 group-hover:bg-gold transition-colors duration-500">
+                        <i data-lucide="building-2" class="text-gold group-hover:text-charcoal transition-colors duration-500 w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl mb-4 group-hover:text-gold transition-colors">Penthouse Design</h3>
+                    <p class="text-sm text-beige font-light leading-relaxed">Elevated sky-living concepts maximizing views, light, and sophisticated urban aesthetics.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="glass-card p-10 group cursor-hover" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" data-aos="fade-up" data-aos-delay="300">
+                    <div class="icon-wrapper w-16 h-16 rounded-full border border-gold/30 flex items-center justify-center mb-8 group-hover:bg-gold transition-colors duration-500">
+                        <i data-lucide="armchair" class="text-gold group-hover:text-charcoal transition-colors duration-500 w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl mb-4 group-hover:text-gold transition-colors">Furniture Curation</h3>
+                    <p class="text-sm text-beige font-light leading-relaxed">Sourcing and commissioning bespoke, limited-edition pieces from global luxury artisans.</p>
+                </div>
+                <!-- Service 4 -->
+                <div class="glass-card p-10 group cursor-hover" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" data-aos="fade-up" data-aos-delay="400">
+                    <div class="icon-wrapper w-16 h-16 rounded-full border border-gold/30 flex items-center justify-center mb-8 group-hover:bg-gold transition-colors duration-500">
+                        <i data-lucide="key" class="text-gold group-hover:text-charcoal transition-colors duration-500 w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl mb-4 group-hover:text-gold transition-colors">Turnkey Execution</h3>
+                    <p class="text-sm text-beige font-light leading-relaxed">White-glove project management from initial conceptualization to the final styling reveal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Case Study (Portfolio Section) -->
+    <section id="portfolio" class="py-32 bg-charcoal overflow-hidden">
+        <div class="max-w-screen-2xl mx-auto px-6">
+            <div class="grid lg:grid-cols-12 gap-0 items-center">
+                <div class="lg:col-span-5 bg-onyx p-12 md:p-20 z-10 relative shadow-2xl glass-card" data-aos="fade-right" data-tilt data-tilt-max="3" data-tilt-perspective="1000">
+                    <h4 class="text-gold uppercase tracking-[0.3em] text-xs mb-4">Featured Case Study</h4>
+                    <h2 class="text-4xl md:text-5xl font-serif mb-6">The Vinay &amp; Aayushi Estate</h2>
+                    <p class="text-beige font-light leading-loose mb-8 text-sm">
+                        A masterclass in modern opulence. This sweeping estate project required a delicate balance of rich cultural heritage and ultra-modern luxury. Utilizing deep royal ivory tones, textured gold leaf, and bespoke lighting, we created a sanctuary that is both a spectacular venue for entertaining and an intimate family retreat.
+                    </p>
+                    <ul class="space-y-4 mb-10 text-sm font-light text-ivory">
+                        <li class="flex items-center gap-3"><i data-lucide="check" class="text-gold w-4 h-4"></i> Complete Architectural Restyling</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check" class="text-gold w-4 h-4"></i> Custom Bronze &amp; Resin Art Installations</li>
+                        <li class="flex items-center gap-3"><i data-lucide="check" class="text-gold w-4 h-4"></i> Integrated Smart Home Symphony</li>
+                    </ul>
+                    <a href="#" class="group inline-flex items-center gap-2 text-gold uppercase tracking-widest text-xs font-medium hover:text-ivory transition-colors cursor-hover">
+                        View Full Gallery <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-2 transition-transform"></i>
+                    </a>
+                </div>
+                <div class="lg:col-span-7 -ml-0 lg:-ml-20 mt-10 lg:mt-0 img-reveal-container cursor-hover" data-aos="fade-left">
+                    <div class="reveal-overlay bg-onyx absolute inset-0 z-10 w-full h-full"></div>
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80" alt="The Vinay & Aayushi Estate" class="w-full h-[600px] lg:h-[800px] object-cover hover-scale-img parallax-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Testimonials (Journal Section) -->
+    <section id="journal" class="py-32 bg-onyx relative overflow-hidden">
+        <!-- Abstract background elements -->
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-gold/5 rounded-full blur-3xl animate-pulse"></div>
+        <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gold/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        
+        <div class="max-w-screen-xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <h4 class="text-gold uppercase tracking-[0.3em] text-xs mb-4">Client Relations</h4>
+                <h2 class="text-4xl md:text-5xl font-serif">Words of Trust</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-10">
+                <!-- Review 1 -->
+                <div class="glass-card p-12 relative cursor-hover" data-tilt data-tilt-max="5" data-tilt-glare="true" data-tilt-max-glare="0.1" data-aos="fade-up" data-aos-delay="100">
+                    <i data-lucide="quote" class="absolute top-10 right-10 w-12 h-12 text-gold/20"></i>
+                    <p class="text-beige font-light leading-relaxed italic mb-8 text-lg relative z-10">
+                        "The attention to detail in our penthouse was staggering. From the sourcing of Italian marbles to the final layout of the bespoke furnishings, the entire process was handled with absolute mastery. They didn't just design a house; they curated a lifestyle."
+                    </p>
+                    <div class="flex items-center gap-4 relative z-10">
+                        <div class="w-12 h-[1px] bg-gold"></div>
+                        <div>
+                            <p class="font-serif text-xl text-ivory">Sweety Kushwaha</p>
+                            <p class="text-xs text-gold uppercase tracking-widest mt-1">Penthouse Owner</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Review 2 -->
+                <div class="glass-card p-12 relative cursor-hover" data-tilt data-tilt-max="5" data-tilt-glare="true" data-tilt-max-glare="0.1" data-aos="fade-up" data-aos-delay="200">
+                    <i data-lucide="quote" class="absolute top-10 right-10 w-12 h-12 text-gold/20"></i>
+                    <p class="text-beige font-light leading-relaxed italic mb-8 text-lg relative z-10">
+                        "An absolute masterclass in luxury architecture and bespoke styling. The team understood our vision immediately and elevated it beyond our highest expectations. A truly white-glove, seamless experience from start to finish."
+                    </p>
+                    <div class="flex items-center gap-4 relative z-10">
+                        <div class="w-12 h-[1px] bg-gold"></div>
+                        <div>
+                            <p class="font-serif text-xl text-ivory">Sauhard Kushwaha</p>
+                            <p class="text-xs text-gold uppercase tracking-widest mt-1">Real Estate Developer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consultation CTA Section -->
+    <section class="py-40 relative flex items-center justify-center text-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img id="cta-img" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80" alt="Luxury Mansion" class="w-full h-[120%] object-cover opacity-30 origin-bottom">
+            <div class="absolute inset-0 bg-charcoal/80 backdrop-blur-[2px]"></div>
+        </div>
+        <div class="relative z-10 max-w-3xl mx-auto px-6" data-aos="zoom-in" data-aos-duration="1000">
+            <div class="w-20 h-20 mx-auto border border-gold rounded-full flex items-center justify-center mb-8 hover:bg-gold hover:text-charcoal transition-colors duration-500 cursor-hover">
+                <i data-lucide="gem" class="w-8 h-8 text-current"></i>
+            </div>
+            <h2 class="text-5xl md:text-7xl font-serif mb-6 leading-tight">Let's Create Something <br><span class="italic text-gold">Extraordinary</span></h2>
+            <p class="text-beige font-light mb-10 text-lg">We are currently accepting new commissions for 2026/2027.</p>
+            <a href="#contact" class="magnetic-btn inline-block bg-gold text-charcoal px-12 py-5 uppercase tracking-[0.2em] text-sm font-medium hover:bg-ivory transition-colors duration-500 shadow-[0_0_30px_rgba(212,175,55,0.3)] cursor-hover">
+                Request a Consultation
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-32 bg-charcoal">
+        <div class="max-w-screen-xl mx-auto px-6 grid md:grid-cols-2 gap-20">
+            <div data-aos="fade-right">
+                <h4 class="text-gold uppercase tracking-[0.3em] text-xs mb-4">Connect</h4>
+                <h2 class="text-4xl md:text-5xl font-serif mb-8">Begin Your Journey</h2>
+                <p class="text-beige font-light mb-12">Please fill out the form with details about your prospective project, and a member of our executive team will contact you to arrange a private consultation.</p>
+                
+                <div class="space-y-8">
+                    <div class="flex items-start gap-4 group cursor-hover">
+                        <div class="p-3 border border-gold/30 rounded-full group-hover:bg-gold transition-colors duration-500">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-gold group-hover:text-charcoal transition-colors"></i>
+                        </div>
+                        <div class="pt-1">
+                            <h4 class="font-serif text-xl text-ivory mb-1">Studio Headquarters</h4>
+                            <p class="text-sm text-beige font-light">Lucknow Design District<br>Uttar Pradesh, India</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4 group cursor-hover">
+                        <div class="p-3 border border-gold/30 rounded-full group-hover:bg-gold transition-colors duration-500">
+                            <i data-lucide="mail" class="w-5 h-5 text-gold group-hover:text-charcoal transition-colors"></i>
+                        </div>
+                        <div class="pt-1">
+                            <h4 class="font-serif text-xl text-ivory mb-1">Direct Inquiry</h4>
+                            <p class="text-sm text-beige font-light">estates@codechampsdesign.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="fade-left">
+                <!-- Working Contact Form via FormSubmit -->
+                <form action="https://formsubmit.co/estates@codechampsdesign.com" method="POST" class="glass-card p-10 space-y-6 relative overflow-hidden" data-tilt data-tilt-max="2" data-tilt-glare="true" data-tilt-max-glare="0.05">
+                    
+                    <!-- Hidden Config For Email Routing -->
+                    <input type="hidden" name="_subject" value="New Design Consultation Inquiry!">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    
+                    <!-- Subtle glow behind form -->
+                    <div class="absolute -top-20 -right-20 w-40 h-40 bg-gold/10 blur-3xl rounded-full"></div>
+                    
+                    <div class="relative z-10">
+                        <label class="block text-xs uppercase tracking-widest text-beige mb-2">Full Name</label>
+                        <input type="text" name="name" required class="w-full bg-transparent border-b border-gold/30 py-3 text-ivory focus:outline-none focus:border-gold transition-colors cursor-text" placeholder="e.g. Mr. John Doe">
+                    </div>
+                    <div class="relative z-10">
+                        <label class="block text-xs uppercase tracking-widest text-beige mb-2">Email Address</label>
+                        <input type="email" name="email" required class="w-full bg-transparent border-b border-gold/30 py-3 text-ivory focus:outline-none focus:border-gold transition-colors cursor-text" placeholder="john@example.com">
+                    </div>
+                    <div class="relative z-10">
+                        <label class="block text-xs uppercase tracking-widest text-beige mb-2">Project Type</label>
+                        <select name="project_type" required class="w-full bg-transparent border-b border-gold/30 py-3 text-ivory focus:outline-none focus:border-gold transition-colors appearance-none cursor-pointer">
+                            <option class="bg-charcoal text-ivory">Luxury Residential</option>
+                            <option class="bg-charcoal text-ivory">Penthouse Renovation</option>
+                            <option class="bg-charcoal text-ivory">Boutique Hospitality</option>
+                            <option class="bg-charcoal text-ivory">Commercial Space</option>
+                        </select>
+                    </div>
+                    <div class="relative z-10">
+                        <label class="block text-xs uppercase tracking-widest text-beige mb-2">Project Details</label>
+                        <textarea name="message" required rows="4" class="w-full bg-transparent border-b border-gold/30 py-3 text-ivory focus:outline-none focus:border-gold transition-colors cursor-text" placeholder="Briefly describe your vision and location..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-gold text-charcoal py-4 uppercase tracking-[0.2em] text-sm font-medium hover:bg-ivory transition-colors duration-500 mt-4 relative z-10 overflow-hidden group cursor-hover">
+                        <span class="relative z-10">Submit Inquiry</span>
+                        <div class="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#0a0a0a] border-t border-gold/20 pt-20 pb-10">
+        <div class="max-w-screen-2xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <div class="md:col-span-2">
+                    <a href="#" class="font-serif text-3xl tracking-[0.2em] text-ivory uppercase block mb-6 cursor-hover">
+                        Code<span class="text-gold">-</span>Champs
+                    </a>
+                    <p class="text-sm text-beige font-light max-w-sm leading-relaxed">
+                        Setting the global standard for ultra-luxury residential architecture and bespoke interior design.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-serif text-xl text-ivory mb-6">Navigation</h4>
+                    <ul class="space-y-3 text-sm text-beige font-light">
+                        <li><a href="#about" class="hover:text-gold transition-colors link-underline inline-block cursor-hover">The Studio</a></li>
+                        <li><a href="#services" class="hover:text-gold transition-colors link-underline inline-block cursor-hover">Signature Services</a></li>
+                        <li><a href="#portfolio" class="hover:text-gold transition-colors link-underline inline-block cursor-hover">Selected Works</a></li>
+                        <li><a href="#contact" class="hover:text-gold transition-colors link-underline inline-block cursor-hover">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-serif text-xl text-ivory mb-6">Newsletter</h4>
+                    <p class="text-sm text-beige font-light mb-4">Exclusive design insights delivered monthly.</p>
+                    <div class="flex border-b border-gold/30 pb-2 focus-within:border-gold transition-colors">
+                        <input type="email" placeholder="Your Email" class="bg-transparent w-full text-sm text-ivory outline-none cursor-text">
+                        <button class="text-gold uppercase tracking-widest text-xs font-medium hover:text-ivory cursor-hover">Join</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gold/10 text-xs text-beige/50 font-light uppercase tracking-widest">
+                <p>&copy; 2026 Code-Champs Design Studio. All Rights Reserved.</p>
+                <div class="flex gap-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-gold transition-colors cursor-hover">Instagram</a>
+                    <a href="#" class="hover:text-gold transition-colors cursor-hover">Pinterest</a>
+                    <a href="#" class="hover:text-gold transition-colors cursor-hover">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- External Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Vanilla Tilt for 3D card interactions -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    
+    <!-- Custom Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
