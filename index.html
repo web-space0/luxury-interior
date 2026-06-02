@@ -82,6 +82,18 @@
             <button class="md:hidden text-gold"><i data-lucide="menu" class="w-6 h-6"></i></button>
         </div>
     </nav>
+    <div id="mobile-menu" class="fixed inset-0 bg-charcoal/95 backdrop-blur-xl z-50 flex flex-col items-center justify-center opacity-0 pointer-events-none transition-opacity duration-500">
+    <button id="close-menu-btn" class="absolute top-6 right-6 text-gold p-2 cursor-hover">
+        <i data-lucide="x" class="w-8 h-8"></i>
+    </button>
+    <div class="flex flex-col items-center space-y-8 text-lg uppercase tracking-[0.2em] text-beige font-light">
+        <a href="#about" class="mobile-link hover:text-gold transition-colors cursor-hover">Studio</a>
+        <a href="#services" class="mobile-link hover:text-gold transition-colors cursor-hover">Services</a>
+        <a href="#portfolio" class="mobile-link hover:text-gold transition-colors cursor-hover">Portfolio</a>
+        <a href="#journal" class="mobile-link hover:text-gold transition-colors cursor-hover">Journal</a>
+        <a href="#contact" class="mobile-link text-gold border border-gold px-8 py-3 mt-4 hover:bg-gold hover:text-charcoal transition-colors cursor-hover">Inquire</a>
+    </div>
+    </div>
 
     <!-- Hero Section -->
     <section class="relative h-screen flex items-center justify-center pt-20 overflow-hidden">
